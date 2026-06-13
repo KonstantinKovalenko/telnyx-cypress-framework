@@ -5,13 +5,16 @@
   "main": "index.js",
   "scripts": {
     "cy:open": "cypress open",
-    "cy:run": "cypress run"
+    "cy:run": "cypress run",
+    "cy:run:alt": "cypress run --config-file cypress.alt.config.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "cypress": "^15.17.0"
+    "@types/node": "^25.9.3",
+    "cypress": "^15.17.0",
+    "typescript": "^6.0.3"
   }
 }
