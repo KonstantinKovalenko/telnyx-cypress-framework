@@ -1,0 +1,18 @@
+{
+  "validUser": {
+    "firstName": "",
+    "lastName": "",
+    "email": "",
+    "phone":"",
+    "company": "",
+    "message": ""
+  },
+  "invalidUser": {
+    "firstName": "",
+    "lastName": "",
+    "email": "",
+    "phone":"",
+    "company": "",
+    "message": ""
+  }
+}
