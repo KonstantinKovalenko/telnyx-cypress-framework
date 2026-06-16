@@ -1,18 +1,11 @@
 {
   "validUser": {
-    "firstName": "",
-    "lastName": "",
-    "email": "",
-    "phone":"",
-    "company": "",
-    "message": ""
-  },
-  "invalidUser": {
-    "firstName": "",
-    "lastName": "",
-    "email": "",
-    "phone":"",
-    "company": "",
-    "message": ""
+    "firstName": "Jay",
+    "lastName": "White",
+    "email": "testmail@test.com",
+    "phone":"1111111",
+    "company": "test company",
+    "message": "This is a test message, please do not answer it. Have a great day!",
+    "query": "My sincere apologies."
   }
 }

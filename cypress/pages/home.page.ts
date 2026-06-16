@@ -1,10 +1,29 @@
 class HomePage {
-    #HOMEURL = "https://telnyx.com/"
+    private selectors = {
+        headline: '#hero-headline',
+        exploreButton: '[data-content="EXPLORE THE STACK"]',
+        fullStackDetail: '#full-stack-detail',
+        featureDemo: '#feature-demo'
+    };
 
-    get #headline () {return $('#hero-headline')}
+    open(): void {
+        cy.visit('/')
+    }
 
-    open (){
-        cy.visit(this.#HOMEURL)
+    getMainHeadline() {
+        return cy.get(this.selectors.headline);
+    }
+
+    getExploreStackButton() {
+        return cy.get(this.selectors.exploreButton);
+    }
+
+    getFullStackSection() {
+        return cy.get(this.selectors.fullStackDetail);
+    }
+
+    getFeatureDemoSection(){
+        return cy.get(this.selectors.featureDemo)
     }
 }
 
