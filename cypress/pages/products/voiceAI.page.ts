@@ -1,7 +1,9 @@
 class VoiceAIPage {
 
-    get #headlineSection () {return $('#6a15fc13148e300001b4572c')}
-
+    getHeadline(){
+        return cy.contains('Voice AI Agents')
+    }
 }
 
 export default new VoiceAIPage();
+
