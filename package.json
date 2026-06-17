@@ -6,7 +6,8 @@
   "scripts": {
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "cy:run:alt": "cypress run --config-file cypress.alt.config.ts"
+    "cy:desktop": "cypress run --config-file cypress.config.ts",
+    "cy:mobile": "cypress run --config-file cypress.mobile.config.ts"
   },
   "keywords": [],
   "author": "",

@@ -1,9 +1,7 @@
 class SignUpPage {
-    #HOMEURL = "https://telnyx.com/sign-up"
 
-
-    open (){
-        cy.visit(this.#HOMEURL)
+    getHeader(){
+        return cy.contains('h1', 'Create your account')
     }
 }
 

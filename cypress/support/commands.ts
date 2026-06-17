@@ -23,3 +23,12 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+import Footer from "../pages/footer"
+
+Cypress.Commands.add('scrollToFooter', () => {
+  Footer.getFooter().scrollIntoView();
+})
+
+Cypress.Commands.add('openHomePage', () => {
+  cy.visit('/');
+});

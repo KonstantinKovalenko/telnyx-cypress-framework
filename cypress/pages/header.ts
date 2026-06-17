@@ -1,11 +1,14 @@
 class Header {
     private selectors = {
         globalHeader: '#site-header',
+        mainMenu: '#main-menu',
 
         contactUsBtn: '[href="https://telnyx.com/contact-us"]',
         productsBtn: '#radix-_R_4b9iivb_',
+        hamburgerBtn: '[aria-controls="main-menu-content"]',
 
-        voiceAIFrame: '#radix-_R_4b9iivbH1_'
+        voiceAIFrame: '[href="/products/voice-ai-agents"]',
+        healthCareFrame: '[href="/solutions/healthcare"]'
     };
 
     getHeader(){
@@ -21,7 +24,31 @@ class Header {
     }
 
     getVoiceAiFrame(){
-        return cy.get(this.selectors.voiceAIFrame).find('a[href="/products/voice-ai"]').eq(0)
+        return cy.get(this.selectors.voiceAIFrame).eq(1)
+    }
+
+    getPricingBtn(){
+        return cy.contains('span', 'Pricing')
+    }
+
+    getMobileVoiceFrame(){
+        return cy.contains('h2', 'Mobile Voice')
+    }
+
+    getHamburgerBtn(){
+        return cy.get(this.selectors.hamburgerBtn)
+    }
+
+    getMainMenu(){
+        return cy.get(this.selectors.mainMenu)
+    }
+
+    getSolutionsBtn(){
+        return cy.contains('span', 'Solutions')
+    }
+
+    getHealthcareFrame(){
+        return cy.get(this.selectors.healthCareFrame).eq(2)
     }
 }
 
