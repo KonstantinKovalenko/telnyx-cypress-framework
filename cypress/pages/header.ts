@@ -6,9 +6,11 @@ class Header {
         contactUsBtn: '[href="https://telnyx.com/contact-us"]',
         productsBtn: '#radix-_R_4b9iivb_',
         hamburgerBtn: '[aria-controls="main-menu-content"]',
+        logInBtn: '[href="https://portal.telnyx.com"]',
 
         voiceAIFrame: '[href="/products/voice-ai-agents"]',
-        healthCareFrame: '[href="/solutions/healthcare"]'
+        healthCareFrame: '[href="/solutions/healthcare"]',
+        supportCenterFrame: '[href="https://support.telnyx.com/en/"]'
     };
 
     getHeader(){
@@ -49,6 +51,18 @@ class Header {
 
     getHealthcareFrame(){
         return cy.get(this.selectors.healthCareFrame).eq(2)
+    }
+
+    getResourcesBtn(){
+        return cy.contains('span', 'Resources')
+    }
+
+    getSupportCenterFrame(){
+        return cy.get(this.selectors.supportCenterFrame).eq(1)
+    }
+
+    getLogInBtn(){
+        return cy.get(this.selectors.logInBtn).eq(1)
     }
 }
 
