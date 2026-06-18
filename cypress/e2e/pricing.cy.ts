@@ -8,8 +8,8 @@ describe('TC-06, Verify navigation from pricing information to account registrat
   })
 
   it('should show simple transition from price checking to registration', () => {
-    Header.getPricingBtn().click()
-    Header.getMobileVoiceFrame().click()
+    Header.getPricingBtn().should('be.visible').click()
+    Header.getMobileVoiceFrame().should('be.visible').click()
 
     MobileVoicePage.getPayAsYouGoLink().click()
     MobileVoicePage.getCarrierFeeLink().click()
