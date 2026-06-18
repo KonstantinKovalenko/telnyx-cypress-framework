@@ -23,7 +23,7 @@ describe('TC-03, TC-04, "Contact us" form submission & validation', () => {
     })
 
     ContactUsPage.getSubmitBtn().should('be.enabled').click()
-    
+
     cy.contains('Thank you').should('be.visible')
   }) 
 
