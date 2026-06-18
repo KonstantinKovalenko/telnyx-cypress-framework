@@ -26,7 +26,7 @@ jobs:
       # DESKTOP RUN
       # -------------------------
       - name: Run Cypress tests (desktop)
-        run: npx cypress run --record --tag desktop --ignore cypress/e2e/navigation.mobile.cy.ts
+        run: npx cypress run --record --tag desktop --spec cypress/e2e/desktop/**/*.cy.ts
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
 
@@ -34,6 +34,6 @@ jobs:
       # MOBILE RUN
       # -------------------------
       - name: Run Cypress tests (mobile navigation)
-        run: npx cypress run --record --config-file cypress.mobile.config.ts --spec cypress/e2e/navigation.mobile.cy.ts --tag mobile
+        run: npx cypress run --record --config-file cypress.mobile.config.ts --spec cypress/e2e/mobile/**/*.cy.ts --tag mobile
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}

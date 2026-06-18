@@ -1,4 +1,4 @@
-import Header from "../pages/header"
+import Header from "../../pages/header"
 
 describe('TC-05, UI navigation', () => {
 

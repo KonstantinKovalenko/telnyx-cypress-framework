@@ -1,5 +1,5 @@
-import Header from "../pages/header"
-import HomePage from "../pages/home.page"
+import Header from "../../pages/header"
+import HomePage from "../../pages/home.page"
 
 describe('TC-08, mobile UI navigation', () => {
 

@@ -1,5 +1,5 @@
-import Header from "../pages/header"
-import MobileVoicePage from "../pages/pricing/mobileVoice.page"
+import Header from "../../pages/header"
+import MobileVoicePage from "../../pages/pricing/mobileVoice.page"
 
 describe('TC-06, Verify navigation from pricing information to account registration', () => {
 

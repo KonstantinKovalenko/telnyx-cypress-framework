@@ -1,4 +1,4 @@
-import HomePage from "../pages/home.page"
+import HomePage from "../../pages/home.page"
 
 describe('TC-01 Verify homepage loads successfully and key elements are displayed', () => {
 

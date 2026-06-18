@@ -1,5 +1,5 @@
-import Header from "../pages/header"
-import ContactUsPage from "../pages/contactUs.page"
+import Header from "../../pages/header"
+import ContactUsPage from "../../pages/contactUs.page"
 
 describe('TC-03, TC-04, "Contact us" form submission & validation', () => {
 

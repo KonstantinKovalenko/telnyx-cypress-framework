@@ -1,5 +1,5 @@
-import Header from "../pages/header"
-import HomePage from "../pages/home.page"
+import Header from "../../pages/header"
+import HomePage from "../../pages/home.page"
 
 describe('TC-02 Verify header menu hides on downward scrolling and reappears on upward scrolling', () => {
 

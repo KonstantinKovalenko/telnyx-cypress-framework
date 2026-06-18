@@ -1,4 +1,4 @@
-import Header from "../pages/header"
+import Header from "../../pages/header"
 
 describe('TC-09, Verify Support Center content availability and collection navigation', () => {
 
