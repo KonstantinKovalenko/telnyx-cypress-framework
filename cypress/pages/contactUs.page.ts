@@ -37,7 +37,8 @@ class ContactUsPage {
         if (!allowed.includes(value)){
             throw new Error (`Invalid name: ${value}. Allowed values: ${allowed.join(', ')}`)
         }
-        cy.get(this.selectors.reasonSelect).select(value)
+        
+        cy.get(this.selectors.reasonSelect, { timeout: 10000 }).should('be.visible').select(value)
     }
 
     selectCountryByIndex(index: number){
