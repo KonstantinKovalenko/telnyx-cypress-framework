@@ -26,7 +26,7 @@ jobs:
       # DESKTOP RUN
       # -------------------------
       - name: Run Cypress tests (desktop)
-        run: npx cypress run --record --tag desktop
+        run: npx cypress run --record --tag desktop --ignore cypress/e2e/navigation.mobile.cy.ts
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
 
