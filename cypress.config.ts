@@ -4,6 +4,8 @@ export default defineConfig({
   e2e: {
     projectId: "55nqku",
 
+    specPattern: "cypress/e2e/desktop/**/*.cy.ts",
+
     baseUrl: 'https://telnyx.com',
 
     viewportWidth: 1920,

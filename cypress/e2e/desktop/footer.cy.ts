@@ -1,4 +1,4 @@
-import Footer from "../pages/footer"
+import Footer from "../../pages/footer"
 
 describe('TC-07, Verify footer links are functional and displayed across multiple pages', () => {
 

@@ -1,4 +1,4 @@
-import Header from "../pages/header"
+import Header from "../../pages/header"
 
 describe('TC-10, Verify access to the login page from the homepage', () => {
 
