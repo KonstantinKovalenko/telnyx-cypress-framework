@@ -11,8 +11,8 @@ describe('TC-06, Verify navigation from pricing information to account registrat
     Header.getPricingBtn().should('be.visible').click()
     Header.getMobileVoiceFrame().should('be.visible').click()
 
-    MobileVoicePage.getPayAsYouGoLink().click()
-    MobileVoicePage.getCarrierFeeLink().click()
+    MobileVoicePage.getPayAsYouGoLink().should('be.visible').click()
+    MobileVoicePage.getCarrierFeeLink().should('be.visible').click()
 
     MobileVoicePage.getSignUpBtn().should('be.visible').and('not.be.disabled').click()
 

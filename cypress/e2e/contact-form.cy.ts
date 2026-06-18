@@ -21,14 +21,14 @@ describe('TC-03, TC-04, "Contact us" form submission & validation', () => {
     cy.fixture('contactUs').then((data) => {
       ContactUsPage.fillQueryForm(data.validUser)
     })
-/* 
+
     ContactUsPage.getSubmitBtn().should('be.enabled').click()
     
-    cy.contains('Thank you').should('be.visible') */
+    cy.contains('Thank you').should('be.visible')
   }) 
 
   it('should show form validation with empty fields', () => {
-    Header.getContactUsButton().click()
+    Header.getContactUsButton().should('be.visible').click()
 
     ContactUsPage.getMainForm().should('be.visible')
     ContactUsPage.submitForm()

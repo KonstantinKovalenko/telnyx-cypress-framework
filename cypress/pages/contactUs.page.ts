@@ -38,7 +38,7 @@ class ContactUsPage {
             throw new Error (`Invalid name: ${value}. Allowed values: ${allowed.join(', ')}`)
         }
         
-        cy.get(this.selectors.reasonSelect, { timeout: 10000 }).should('be.visible').select(value)
+        cy.get(this.selectors.reasonSelect).should('be.visible').select(value)
     }
 
     selectCountryByIndex(index: number){
@@ -48,7 +48,7 @@ class ContactUsPage {
             if (index < 1 || index >= length) {
                 throw new Error(`Index ${index} out of range. Valid range: 1 - ${length - 1}`)
             }
-            cy.get(this.selectors.countrySelect).select(index)
+            cy.get(this.selectors.countrySelect).should('be.visible').select(index)
         })
     }
 
