@@ -13,6 +13,8 @@ describe('TC-03, TC-04, "Contact us" form submission & validation', () => {
 
     Header.getContactUsButton().should('be.visible').and('not.be.disabled').click()
 
+    ContactUsPage.getMainForm().should('be.visible')
+
     ContactUsPage.selectReasonByName(reason)
     ContactUsPage.selectCountryByIndex(countryIndex)
 
