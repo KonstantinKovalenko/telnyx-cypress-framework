@@ -34,7 +34,7 @@ class Header {
     }
 
     getHamburgerBtn(){
-        return cy.get(this.selectors.hamburgerBtn)
+        return cy.get('button[aria-controls="main-menu-content"]')
     }
 
     getMainMenu(){
