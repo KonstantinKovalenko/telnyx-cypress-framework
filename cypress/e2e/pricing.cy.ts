@@ -1,12 +1,11 @@
-import Header from "../pages/header";
-import MobileVoicePage from "../pages/pricing/mobileVoice.page";
-import SignUpPage from "../pages/signUp.page";
+import Header from "../pages/header"
+import MobileVoicePage from "../pages/pricing/mobileVoice.page"
 
 describe('TC-06, Verify navigation from pricing information to account registration', () => {
 
   beforeEach(() => {
-    cy.visit('/');
-  });
+    cy.openHomePage()
+  })
 
   it('should show simple transition from price checking to registration', () => {
     Header.getPricingBtn().click()
@@ -18,6 +17,6 @@ describe('TC-06, Verify navigation from pricing information to account registrat
     MobileVoicePage.getSignUpBtn().should('be.visible').and('not.be.disabled').click()
 
     cy.url().should('include', 'sign-up')
-    SignUpPage.getHeader().should('be.visible')
-  });
-});
+    cy.contains('h1', 'Create your account').should('be.visible')
+  })
+})

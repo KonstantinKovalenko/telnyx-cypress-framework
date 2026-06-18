@@ -4,7 +4,7 @@ class HomePage {
         exploreButton: '[data-content="EXPLORE THE STACK"]',
         fullStackDetail: '#full-stack-detail',
         featureDemo: '#feature-demo'
-    };
+    }
 
     open(): void {
         cy.visit('/')

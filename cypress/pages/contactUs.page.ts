@@ -62,7 +62,7 @@ class ContactUsPage {
     }
 
     submitForm(){
-        this.getSubmitBtn().should('not.be.disabled').click()
+        this.getSubmitBtn().click()
     }
 }
 

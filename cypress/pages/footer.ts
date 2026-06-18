@@ -1,8 +1,7 @@
 class Footer {
 
     private selectors = {
-        globalFooter: '#site-footer',
-        tablesParentSelector: '[class="grid gap-new-xs"]'
+        globalFooter: '#site-footer'
     }
 
     getFooter(){
@@ -14,7 +13,7 @@ class Footer {
     }
 
     getOurNetworkLink(){
-        return cy.get(this.selectors.tablesParentSelector).contains('a[href="/our-network"]', 'Our Network');
+        return cy.get(this.selectors.globalFooter).contains('a[href="/our-network"]', 'Our Network');
     }
 
     getSocialBlock(){
@@ -22,7 +21,7 @@ class Footer {
     }
 
     getPrivacyPolicyLink(){
-        return cy.get(this.selectors.tablesParentSelector).contains('a[href="/privacy-policy"]', 'Privacy Policy');
+        return cy.get(this.selectors.globalFooter).contains('a[href="/privacy-policy"]', 'Privacy Policy');
     }
 }
 

@@ -3,34 +3,30 @@ class Header {
         globalHeader: '#site-header',
         mainMenu: '#main-menu',
 
-        contactUsBtn: '[href="https://telnyx.com/contact-us"]',
-        productsBtn: '#radix-_R_4b9iivb_',
         hamburgerBtn: '[aria-controls="main-menu-content"]',
-        logInBtn: '[href="https://portal.telnyx.com"]',
 
-        voiceAIFrame: '[href="/products/voice-ai-agents"]',
-        healthCareFrame: '[href="/solutions/healthcare"]',
-        supportCenterFrame: '[href="https://support.telnyx.com/en/"]'
-    };
+        healthCareFrameMobile: '.overflow-auto',
+        supportCenterFrame: '[role="menu"]'
+    }
 
     getHeader(){
         return cy.get(this.selectors.globalHeader)
     }
 
     getContactUsButton(){
-        return cy.get(this.selectors.contactUsBtn).eq(1)
+        return cy.get('header').find('div.ml-auto').contains('a', 'Contact us')
     }
 
     getProductsBtn(){
-        return cy.get(this.selectors.productsBtn)
+        return cy.get('button').contains('span', 'Products')
     }
 
-    getVoiceAiFrame(){
-        return cy.get(this.selectors.voiceAIFrame).eq(1)
+    getVoiceAIFrame(){
+        return cy.contains('h2', 'Voice AI')
     }
 
     getPricingBtn(){
-        return cy.contains('span', 'Pricing')
+        return cy.get('button').contains('span', 'Pricing')
     }
 
     getMobileVoiceFrame(){
@@ -46,23 +42,23 @@ class Header {
     }
 
     getSolutionsBtn(){
-        return cy.contains('span', 'Solutions')
+        return cy.get('button').contains('span', 'Solutions')
     }
 
-    getHealthcareFrame(){
-        return cy.get(this.selectors.healthCareFrame).eq(2)
+    getHealthCareFrame(){
+        return cy.get(this.selectors.healthCareFrameMobile).contains('h2', 'Healthcare')
     }
 
     getResourcesBtn(){
-        return cy.contains('span', 'Resources')
+        return cy.get('button').contains('span', 'Resources')
     }
 
     getSupportCenterFrame(){
-        return cy.get(this.selectors.supportCenterFrame).eq(1)
+        return cy.get(this.selectors.supportCenterFrame).contains('a[href="https://support.telnyx.com/en/"]', 'Support center')
     }
 
     getLogInBtn(){
-        return cy.get(this.selectors.logInBtn).eq(1)
+        return cy.get('header').find('div.ml-auto').contains('a', 'Log in')
     }
 }
 

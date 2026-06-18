@@ -2,9 +2,7 @@ class MobileVoicePage {
 
     private selectors = {
         payAsYouGoLink: '[href="#pay-as-you-go"]',
-        carrierFeeLink: '[href="#carrier-fees"]',
-        signUpBtn: '[data-content="Sign up"]'
-        
+        outboundCallSection: '#make-outbound-calls'
     }
 
     getPayAsYouGoLink(){
@@ -12,13 +10,12 @@ class MobileVoicePage {
     }
 
     getCarrierFeeLink(){
-        return cy.get(this.selectors.carrierFeeLink).eq(0)
+        return cy.get(this.selectors.outboundCallSection).contains('a', 'Carrier fee')
     }
 
     getSignUpBtn(){
-        return cy.get(this.selectors.signUpBtn).eq(1)
+        return cy.contains('section', 'Sign up').find('a[href="/sign-up"]')
     }
-
 }
 
 export default new MobileVoicePage();
