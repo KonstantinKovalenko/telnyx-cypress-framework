@@ -34,6 +34,7 @@ jobs:
       # MOBILE RUN
       # -------------------------
       - name: Run mobile tests
+        if: always()
         run: npx cypress run --record --config-file cypress.mobile.config.ts --tag mobile
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
