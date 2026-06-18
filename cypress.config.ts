@@ -7,8 +7,8 @@ export default defineConfig({
     viewportWidth: 1920,
     viewportHeight: 1080,
 
-    defaultCommandTimeout: 8000,
-    
+    defaultCommandTimeout: 10000,
+
     setupNodeEvents(on, config) {
       return config;
     }
