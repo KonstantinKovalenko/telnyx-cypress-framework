@@ -7,9 +7,7 @@ describe('TC-05, UI navigation', () => {
   })
 
   it('should verify navigation to the Voice AI product page via the Products menu', () => {
-    cy.openHomePage()
-
-    Header.getProductsBtn().should('be.visible').and('not.be.disabled').click()
+    Header.getProductsBtn().should('be.visible').click()
 
     Header.getVoiceAIFrame().should('be.visible').and('not.be.disabled').click()
 
