@@ -20,7 +20,16 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Run Cypress tests
-        run: npx cypress run
+        run: npx cypress run --browser chrome
+
+      - name: Upload Cypress artifacts
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cypress-artifacts-${{ github.run_number }}
+          path: |
+            cypress/screenshots
+            cypress/videos
