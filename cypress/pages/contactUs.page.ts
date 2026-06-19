@@ -1,3 +1,15 @@
+interface ContactUser {
+    reason: string
+    countryIndex: number
+    firstName: string
+    lastName: string
+    email: string
+    phone: string
+    company: string
+    message: string
+    query: string
+}
+
 class ContactUsPage {
 
     private selectors = {
@@ -31,7 +43,19 @@ class ContactUsPage {
         return cy.get(this.selectors.reasonSelectErr)
     }
 
-    selectReasonByName(value: string){
+    fillQueryForm(user: ContactUser){
+        this.selectReasonByName(user.reason)
+        this.selectCountryByIndex(user.countryIndex)
+        cy.get(this.selectors.firstNameInput).type(user.firstName)
+        cy.get(this.selectors.lastNameInput).type(user.lastName)
+        cy.get(this.selectors.emailInput).type(user.email)
+        cy.get(this.selectors.phoneInput).type(user.phone)
+        cy.get(this.selectors.companyInput).type(user.company)
+        cy.get(this.selectors.textAreaInput).type(user.message)
+        cy.get(this.selectors.queryInput).type(user.query)
+    }
+
+    private selectReasonByName(value: string){
         const allowed = ['Sales Inquiry', 'Support']
 
         if (!allowed.includes(value)){
@@ -41,7 +65,7 @@ class ContactUsPage {
         cy.get(this.selectors.reasonSelect).should('be.visible').select(value)
     }
 
-    selectCountryByIndex(index: number){
+    private selectCountryByIndex(index: number){
          cy.get(this.selectors.countrySelect).find('option').then($options => {
             const length = $options.length;
 
@@ -50,16 +74,6 @@ class ContactUsPage {
             }
             cy.get(this.selectors.countrySelect).should('be.visible').select(index)
         })
-    }
-
-    fillQueryForm(user: any){
-        cy.get(this.selectors.firstNameInput).type(user.firstName)
-        cy.get(this.selectors.lastNameInput).type(user.lastName)
-        cy.get(this.selectors.emailInput).type(user.email)
-        cy.get(this.selectors.phoneInput).type(user.phone)
-        cy.get(this.selectors.companyInput).type(user.company)
-        cy.get(this.selectors.textAreaInput).type(user.message)
-        cy.get(this.selectors.queryInput).type(user.query)
     }
 
     submitForm(){

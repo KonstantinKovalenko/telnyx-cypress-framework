@@ -37,14 +37,31 @@ Two Cypress configs are used:
 ---
 
 ## Run Tests
-### Desktop execution
+### Open Cypress Test Runner:
 ```
-npx cypress run --config-file cypress.config.ts --record --tag desktop
+npm run cy:open
 ```
-### Mobile execution
+### Run tests using the default Cypress configuration:
 ```
-npx cypress run --config-file cypress.mobile.config.ts --record --tag mobile
+npm run cy:run
 ```
+### Run desktop test suite:
+```
+npm run cy:desktop
+```
+### Run mobile test suite:
+```
+npm run cy:mobile
+```
+### Record desktop test run in Cypress Cloud:
+```
+npm run cy:cloud:desktop
+```
+### Record mobile test run in Cypress Cloud:
+```
+npm run cy:cloud:mobile
+```
+>> Cypress Cloud recording requires a valid CYPRESS_RECORD_KEY environment variable.
 
 ---
 ## CI/CD Pipeline (GitHub Actions)

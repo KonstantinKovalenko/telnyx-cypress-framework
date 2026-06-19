@@ -8,15 +8,9 @@ describe('TC-03, TC-04, "Contact us" form submission & validation', () => {
   })
 
   it('should verify form submission using valid data', () => {
-    const reason = "Support"
-    const countryIndex = 5
-
     Header.getContactUsButton().should('be.visible').and('not.be.disabled').click()
 
     ContactUsPage.getMainForm().should('be.visible')
-
-    ContactUsPage.selectReasonByName(reason)
-    ContactUsPage.selectCountryByIndex(countryIndex)
 
     cy.fixture('contactUs').then((data) => {
       ContactUsPage.fillQueryForm(data.validUser)
